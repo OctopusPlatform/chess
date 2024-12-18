@@ -4,7 +4,7 @@ class ChessDataService {
   static async fetchPlayers(year: Number, category: string, type: string, gender: string) {
     try {
       let dataKey = GuidConverter.convertToGuid(`${year}_${category}_${type}_${gender}`);
-      const response = await fetch(`/results/${dataKey}.json`);
+      const response = await fetch(`/chess/results/${dataKey}.json`);
       if (!response.ok) {
         throw new Error(`Failed to fetch results for ${year} ${category} ${type} ${gender}`);
       }
