@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://octopusplatform.github.io/chess",
+  "homepage": "https://roman-bilyak.github.io/chess.champions",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -11,11 +11,12 @@
     "preview": "vite preview",
     "start": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build --branch=main --dest='chess'"
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.2.1",
     "@mui/material": "^6.2.0",
     "crypto-js": "^4.2.0",
     "react": "^18.3.1",

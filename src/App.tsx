@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Typography, CircularProgress, Button, Box } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ChessDataService from './services/ChessDataService';
+import GuidConverter from './services/GuidConverter';
 
 import 'swiper/css';
 import './App.css';
@@ -109,7 +110,10 @@ const App = () => {
                           borderRadius="8px"
                           marginBottom="8px"
                           boxShadow="0px 4px 6px rgba(63, 81, 181, 0.3)"
-                          bgcolor={player.rank <= 3 ? 'white' : ''}>
+                          bgcolor={player.rank <= 3 ? 'white' : ''}
+                          sx={{ cursor: 'pointer' }}
+                          onClick={() => navigate(`/player/${GuidConverter.convertToGuid(player.name)}`)}
+                        >
                           <Box marginRight={1}>
                             <Typography variant="body1">{player.rank}.</Typography>
                           </Box>
